@@ -1,0 +1,32 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/.turbo": true,
+    "**/.docusaurus": true,
+    "**/node_modules": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.formatOnSave": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll": "explicit"
+  },
+  "scss.scannerExclude": [
+    "**/.git"
+  ],
+  "eslint.workingDirectories": [
+    "src"
+  ],
+  "html.customData": [
+    "./packages/webcomponents/web-component.json"
+  ],
+  "github-enterprise.uri": "https://git.awe7.com",
+}
