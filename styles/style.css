@@ -12,18 +12,29 @@ body {
   background-position: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 50vh;
   width: 100%;
 }
 
 .section--parallax-1 {
-  background-image: url('../assets/image_1.jpg');
+  background-image: url('../assets/image_10.jpg');
+  height: 100vh;
 }
 
 .section--parallax-2 {
   background-image: url('../assets/image_2.jpg');
+  background-repeat: repeat;
+  background-size: contain;
 }
 
 .section--parallax-3 {
-  background-image: url('../assets/image_3.jpg');
+  background-image: url('../assets/image_4.jpg');
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+.container {
+  margin: auto;
+  max-width: 1920px !important;
+  padding: 0 20px;
 }
