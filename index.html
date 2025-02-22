@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ái Thi & Anh Tuấn</title>
+    <title>Ái Thi ♡ Anh Tuấn</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Grechen+Fuemen&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Shadows+Into+Light&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Grechen+Fuemen&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
 <body>
   <div class="main">
     <div class="section parallax section--parallax-1">
@@ -17,6 +18,7 @@
         <h2 class="text-6xl text-white font-semibold">Bạn</h2>
       </div>
     </div>
+
     <div class="container">
       <div class="section__title">
         <h3 class="text-xl text-center pt-10">Tới dự hôn lễ của</h3>
@@ -26,9 +28,10 @@
         <h2 class="text-5xl font-thin pt-20">&</h2>
         <h2 class="text-6xl font-thin pt-40">Ái Thi</h2>
       </div>
+
       <div class="section__time flex flex-col gap-1 text-center pt-20">
         <p class="uppercase text-lg">Vào lúc 10 giờ 30' - Chủ nhật</p>
-        <div class="section__date uppercase text-2xl">
+        <div class="section__time uppercase text-2xl">
           <p class="flex items-center justify-center gap-6">Tháng 03 <span>♡</span><span class="text-4xl">09</span><span>♡</span> năm 2025</p>
           <p class="section__note text-base pt-1">(Tức ngày 10 tháng 2 năm Ất Tỵ)</p>
         </div>
@@ -37,14 +40,102 @@
           <p class="uppercase text-basse pt-1"> Xóm Nghĩa Hòa - Xã Nghĩa Phúc - H.Tân Kỳ - Nghệ An</p>
         </div>
       </div>
-      <div class="section parallax section--parallax-2">
-        <div class="section__content uppercase text-white text-5xl flex items-center justify-center w-full h-full">
-          <p>Our story</p>
-        </div>
+    </div>
+
+    <div class="section parallax section--parallax-2">
+      <div class="section__content uppercase text-white text-5xl flex items-center justify-center w-full h-full">
+        <p>Our story</p>
       </div>
     </div>
     <div class="container">
-      <div class="section parallax section--parallax-3"></div>
+      <div class="section__gallery py-10">
+        <div class="section__grid grid grid-cols-2 gap-20">
+          <div class="section__image rounded-xl overflow-hidden group">
+            <img class="transition duration-300" src="./assets/image_2.jpg" alt="">
+          </div>
+          <div class="section__box flex flex-col items-start justify-center">
+            <p class="tracking-widest">Bride</p>
+            <p class="text-4xl tracking-widest">Phan Thị Ái Thi</p>
+          </div>
+        </div>
+        <div class="section__grid grid grid-cols-2 gap-20">
+          <div class="section__box flex flex-col items-start justify-center">
+            <p class="tracking-widest">Groom</p>
+            <p class="text-4xl tracking-widest">Trần Anh Tuấn</p>
+          </div>
+          <div class="section__image rounded-xl overflow-hidden group">
+            <img class="transition duration-300" src="./assets/image_5.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      
+      <div class="section__countdown py-20">
+        <div class="section__title uppercase text-xl text-center">
+          <p>Thời gian đếm ngược</p>
+        </div>
+        <div class="section__wrapper flex items-center justify-center gap-10 pt-10">
+          <div class="section__box text-center">
+            <h3 class="section__day text-6xl">00</h3>
+            <p class="text-xl pt-2">Ngày</p>
+          </div>
+          <div class="section__box text-center">
+            <h3 class="section__hour text-6xl">00</h3>
+            <p class="text-xl pt-2">Giờ</p>
+          </div>
+          <div class="section__box text-center">
+            <h3 class="section__minus text-6xl">00</h3>
+            <p class="text-xl pt-2">Phút</p>
+          </div>
+          <div class="section__box text-center">
+            <h3 class="section__second text-6xl">00</h3>
+            <p class="text-xl pt-2">Giây</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section__gallery pb-10">
+        <div class="section__title uppercase text-3xl text-center pb-6">
+          <p>Album</p>
+        </div>
+        <div class="section__grid grid grid-cols-4 grid-rows-2 gap-4">
+          <div class="section__item rounded-lg overflow-hidden row-span-2 col-span-2">
+            <img class="h-full" src="./assets/image_1.jpg" alt="">
+          </div>
+          <div class="section__item rounded-lg overflow-hidden">
+            <img class="h-full" src="./assets/image_2.jpg" alt="">
+          </div>
+          <div class="section__item rounded-lg overflow-hidden">
+            <img class="h-full" src="./assets/image_4.jpg" alt="">
+          </div>
+          <div class="section__item rounded-lg overflow-hidden">
+            <img class="h-full" src="./assets/image_9.jpg" alt="">
+          </div>
+          <div class="section__item rounded-lg overflow-hidden">
+            <img class="h-full" src="./assets/image_8.jpg" alt="">
+          </div>
+          <div class="section__item rounded-lg overflow-hidden">
+            <img class="h-full" src="./assets/image_3.jpg" alt="">
+          </div>
+          <div class="section__item rounded-lg overflow-hidden">
+            <img class="h-full" src="./assets/image_5.jpg" alt="">
+          </div>
+          <div class="section__item rounded-lg overflow-hidden">
+            <img class="h-full" src="./assets/image_6.jpg" alt="">
+          </div>
+          <div class="section__item rounded-lg overflow-hidden">
+            <img class="h-full" src="./assets/image_2.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section parallax section--parallax-3">
+      <div class="container">
+        <div class="section__form text-white">
+          <div class="section__title text-center text-3xl">
+            <p>Bạn sẽ tham dự chứ ?</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <!-- js -->
