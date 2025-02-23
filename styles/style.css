@@ -58,7 +58,20 @@ body {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
+.container--bg {
+  background-image: url('https://w.ladicdn.com/s1440x1250/6446a909ce8883001284c7a2/paper-texture-20240119073259-9s9u9.png');
+}
+
 .section__form .section__title {
+  font-family: 'Poppins', serif !important;
+}
+
+.form >* {
+  color: rgb(115, 115, 115);
+  font-family: 'Poppins', serif !important;
+}
+
+.form__item {
   font-family: 'Poppins', serif !important;
 }
 
