@@ -18,18 +18,16 @@ body {
 }
 
 .section--parallax-1 {
-  background-image: url('../assets/image_10.jpg');
+  background-image: url('../assets/image_8.jpg');
   height: 100vh;
 }
 
 .section--parallax-2 {
   background-image: url('../assets/image_9.jpg');
-  background-repeat: repeat;
-  background-size: contain;
 }
 
 .section--parallax-3 {
-  background-image: url('../assets/image_10.jpg');
+  background-image: url('../assets/image_8.jpg');
   height: 100vh;
   position: relative;
 }
@@ -51,7 +49,7 @@ body {
 .container {
   margin: auto;
   max-width: 1400px !important;
-  padding: 0 74px;
+  padding: 0 20px;
 }
 
 .section__box p:first-child {
@@ -64,8 +62,8 @@ body {
 
 .section__box h3 {
   font-family: 'Poppins', serif !important;
-  height: 150px;
-  width: 150px;
+  height: 60px;
+  width: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,8 +81,12 @@ body {
 
 .form__item {
   font-family: 'Poppins', serif !important;
-  width: 500px;
+  width: 100%;
   padding-bottom: 10px;
+}
+
+.form {
+  width: 100%;
 }
 
 .form__input {
@@ -120,20 +122,68 @@ body {
   opacity: 0.8;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 0 20px;
-  }
+.section__image,
+.section__item {
+  overflow: hidden;
 }
 
-@media screen and (max-width: 992px) {
+.section__image img,
+.section__item img {
+  transition: all 0.5s ease-in-out;
+}
+
+.section__image:hover img,
+.section__item:hover img {
+  transform: scale(1.05);
+}
+
+@media screen and (min-width: 768px) {
   .container {
     padding: 0 32px;
   }
+
+  .section--parallax-2 {
+    background-image: url('../assets/image_10.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .section__box h3 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .form__item {
+    width: 500px;
+  }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 992px) {
   .container {
     padding: 0 48px;
+  }
+
+  .section--parallax-1 {
+    background-image: url('../assets/image_10.jpg');
+  }
+
+  .section--parallax-3 {
+    background-image: url('../assets/image_10.jpg');
+  }
+
+  .section__box h3 {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 0 72px;
+  }
+
+  .section__box h3 {
+    width: 150px;
+    height: 150px;
   }
 }
