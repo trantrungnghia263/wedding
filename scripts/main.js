@@ -34,26 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
   countDownDate();
 })
 
-new WOW().init();
-
-Swal.fire({
-  title: "Thiệp cưới online Ái Thi & Anh Tuấn",
-  showClass: {
-    popup: `
-      animate__animated
-      animate__fadeInUp
-      animate__faster
-    `
-  },
-  hideClass: {
-    popup: `
-    animate__animated
-    animate__fadeOutDown
-    animate__faster
-    `
-  }
-});
-
 document.addEventListener('click', musicPlay);
 function musicPlay() {
   document.getElementById('audio').play();
