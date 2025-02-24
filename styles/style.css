@@ -34,7 +34,7 @@ body {
 }
 
 .section__bg-parallax--1 {
-  background-image: url('../assets/image_14.jpg');
+  background-image: url('../assets/image_11.jpg');
 }
 
 .section__bg-parallax--2 {
@@ -42,7 +42,7 @@ body {
 }
 
 .section__bg-parallax--3 {
-  background-image: url('../assets/image_15.jpg');
+  background-image: url('../assets/image_14.jpg');
 }
 
 .section__bg-parallax::after {
