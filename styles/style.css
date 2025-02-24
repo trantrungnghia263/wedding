@@ -4,6 +4,10 @@
   font-family: 'Dancing Script', serif !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   box-sizing: border-box;
 }
