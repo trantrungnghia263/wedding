@@ -246,5 +246,14 @@
       document.getElementById('audio').play();
       document.removeEventListener('click', musicPlay);
     }
+
+    // // parallax mobile
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      window.addEventListener('scroll', function() {
+        const parallax = document.querySelector('.parallax');
+        let offset = window.pageYOffset;
+        parallax.style.backgroundPositionY = -(offset * 0.5) + "px";
+      });
+    }
   </script>
 </body
