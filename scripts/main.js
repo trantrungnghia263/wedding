@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //parallax
   const parallaxEls = document.querySelectorAll(".section__bg-parallax");
-
   window.addEventListener("scroll", function () {
     let offset = window.pageYOffset;
   
@@ -56,4 +55,32 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('audio').play();
     document.removeEventListener('click', musicPlay);
   }
+
+  //send to email
+  emailjs.init("myTf2EtOyanMtwXCK");
+
+  function clearInput() {
+    document.getElementById("name").value = "";
+    document.getElementById("advance").value = "Bạn sẽ tham gia chứ ?";
+    document.getElementById("quantity").value = "Số lượng";
+    document.getElementById("note").value = "";
+  }
+
+  document.querySelector(".form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const formData = {
+      name: document.getElementById("name").value,
+      advance: document.getElementById("advance").value,
+      quantity: document.getElementById("quantity").value,
+      note: document.getElementById("note").value
+    };
+
+    emailjs.send("service_ahi7cim", "template_pkc7udv", formData)
+    .then(function (response) {
+      clearInput();
+      alert("Gửi email thành công!");
+    }, function (error) {
+      alert("Gửi email thất bại! " + error);
+    });
+  });
 })

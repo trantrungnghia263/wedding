@@ -20,7 +20,7 @@ body {
 
 .section__bg-parallax {
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
   background-repeat: no-repeat;
   height: 100%;
 }
@@ -85,6 +85,14 @@ body {
   font-family: 'Poppins', serif !important;
 }
 
+.section__title--modifier > h3 {
+  font-family: 'Grechen Fuemen', serif !important;
+}
+
+.section__sub-title {
+  font-family: 'Inter', serif !important;
+}
+
 .form__item {
   font-family: 'Poppins', serif !important;
   width: 100%;
@@ -122,15 +130,12 @@ body {
 }
 
 .form__button {
-  transform: all 0.5s;
+  transition: all 0.5s;
+  font-family: 'Be VietNam Pro', serif !important;
 }
 
 .form__button:focus {
   outline: none;
-}
-
-.form__button:hover {
-  opacity: 0.8;
 }
 
 .section__image,
@@ -145,11 +150,28 @@ body {
 
 .section__image:hover img,
 .section__item:hover img {
-  transform: scale(1.05);
+  scale: 1.05;
 }
 
 .swal2-title {
   font-size: 20px !important;
+  text-transform: uppercase;
+  font-family: 'Caveat', sans-serif !important;
+}
+
+.swal2-html-container {
+  margin-top: 8px !important;
+  font-size: 20px !important;
+}
+
+.swal2-image {
+  margin-bottom: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.paragraph {
+  font-family: 'Dancing Script', serif !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -176,6 +198,10 @@ body {
   .form__item {
     width: 500px;
   }
+}
+
+.paragraph--modifier > * {
+  font-family: 'Caveat', serif !important;
 }
 
 @media screen and (min-width: 992px) {
