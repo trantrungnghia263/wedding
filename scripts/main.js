@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const minuteElement = document.querySelector('.section__minus');
   const secondElement = document.querySelector('.section__second');
 
+  //coundown
   function countDownDate () {
     const targetDate = new Date('2025-03-09');
     console.log(targetDate);
@@ -32,19 +33,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1000)
   }
   countDownDate();
-})
 
-document.addEventListener('click', musicPlay);
-function musicPlay() {
-  document.getElementById('audio').play();
-  document.removeEventListener('click', musicPlay);
-}
+  //parallax
+  const parallaxBgEls = document.querySelectorAll(".section__bg-parallax");
+  parallaxBgEls.forEach(parallaxBg => {
+    let latestScrollY = 0;
+    let ticking = false;
 
-// // parallax mobile
-if (/Mobi|Android/i.test(navigator.userAgent)) {
-  window.addEventListener('scroll', function() {
-    const parallax = document.querySelector('.parallax');
-    let offset = window.pageYOffset;
-    parallax.style.backgroundPositionY = -(offset * 0.5) + "px";
+    function onScroll() {
+      latestScrollY = window.pageYOffset;
+      requestTick();
+    }
+
+    function requestTick() {
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }
+
+    function updateParallax() {
+      parallaxBg.style.transform = `translateY(${latestScrollY * 0.5}px)`;
+      ticking = false;
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
   });
-}
+
+  //audio
+  document.addEventListener('click', musicPlay);
+  function musicPlay() {
+    document.getElementById('audio').play();
+    document.removeEventListener('click', musicPlay);
+  }
+})

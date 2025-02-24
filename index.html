@@ -20,11 +20,13 @@
 
 <body>
   <div class="main">
-    <div class="section parallax section--parallax-1">
-      <div class="section__content flex flex-col items-center justify-center w-full h-full">
-        <p class="text-white text-3xl wow fadeInUp">Thân mời</p>
-        <h2 class="text-6xl text-white font-semibold wow fadeInUp">Bạn</h2>
-      </div>
+    <div class="section parallax">
+     <div class="section__bg-parallax section__bg-parallax--1">
+        <div class="section__content flex flex-col items-center justify-center w-full h-full">
+          <p class="text-white text-3xl wow fadeInUp">Thân mời</p>
+          <h2 class="text-6xl text-white font-semibold wow fadeInUp">Bạn</h2>
+        </div>
+     </div>
     </div>
 
     <div class="section__bg">
@@ -53,9 +55,11 @@
       </div>
     </div>
 
-    <div class="section parallax section--parallax-2">
-      <div class="section__content uppercase text-white text-5xl flex items-center justify-center w-full h-full">
-        <p class="wow fadeInUp">Our story</p>
+    <div class="section parallax">
+      <div class="section__bg-parallax section__bg-parallax--2">
+        <div class="section__content uppercase text-white text-5xl flex items-center justify-center w-full h-full">
+          <p class="wow fadeInUp">Our story</p>
+        </div>
       </div>
     </div>
 
@@ -145,47 +149,49 @@
       </div>
     </div>
 
-    <div class="section parallax section--parallax-3 lg:py-40">
-      <div class="container h-full w-full relative py-20 lg:py-0">
-        <div class="section__form h-full w-full flex flex-col items-center justify-center">
-          <div class="section__title text-center text-white">
-            <h3 class="text-2xl lg:text-3xl uppercase wow fadeInUp">Bạn sẽ tham dự chứ ?</h3>
-            <p class="section__sub-title text-lg md:text-2xl max-w-xl text-center m-auto pt-2 wow fadeInUp">
-              Lễ cưới sẽ trọn vẹn hơn khi có thêm lời chúc phúc và sự hiện
-              diện của Bạn. Xin hãy xác nhận sự có mặt của mình để có thể chuẩn bị đón tiếp một cách
-              chu đáo nhất nhé! Trân trọng!
-            </p>
+    <div class="section parallax lg:py-40">
+      <div class="section__bg-parallax section__bg-parallax--3">
+        <div class="container h-full w-full relative py-20 lg:py-0">
+          <div class="section__form h-full w-full flex flex-col items-center justify-center">
+            <div class="section__title text-center text-white">
+              <h3 class="text-2xl lg:text-3xl uppercase wow fadeInUp">Bạn sẽ tham dự chứ ?</h3>
+              <p class="section__sub-title text-lg md:text-2xl max-w-xl text-center m-auto pt-2 wow fadeInUp">
+                Lễ cưới sẽ trọn vẹn hơn khi có thêm lời chúc phúc và sự hiện
+                diện của Bạn. Xin hãy xác nhận sự có mặt của mình để có thể chuẩn bị đón tiếp một cách
+                chu đáo nhất nhé! Trân trọng!
+              </p>
+            </div>
+            <form action="" class="form pt-10 flex items-center justify-center flex-col">
+              <div class="form__item wow fadeInUp">
+                <input type="text" class="form__input" placeholder="Tên của bạn là gì ?" required>
+              </div>
+              <div class="form__item form__item--select wow fadeInUp">
+                <select class="form__input" name="advance" id="advance" required>
+                  <option class="hidden">Bạn sẽ đến chứ</option>
+                  <option value="Mình chắc chắn sẽ đến">Mình chắc chắn sẽ đến</option>
+                  <option value="Tiếc quá mình không đến">Tiếc quá mình không đến
+                  </option>
+                </select>
+              </div>
+              <div class="form__item form__item--select wow fadeInUp">
+                <select class="form__input" name="quantity" id="quantity" required>
+                  <option class="hidden">Số lượng</option>
+                  <option value="1 người">1 người</option>
+                  <option value="2 người">2 người</option>
+                  <option value="3 người">3 người</option>
+                  <option value="Nhiều người">Nhiều người</option>
+                </select>
+              </div>
+              <div class="form__item form__item--textarea wow fadeInUp">
+                <textarea name="note" id="note" rows="6" placeholder="Để lại lời nhắn cho cô dâu và chú rể"
+                  class="form__input" required></textarea>
+              </div>
+              <div class="form__item wow fadeInUp">
+                <button class="form__button py-2 px-6 w-full text-white text-xl bg-blue-500 rounded-lg" type="submit">Gửi
+                  xác nhận</button>
+              </div>
+            </form>
           </div>
-          <form action="" class="form pt-10 flex items-center justify-center flex-col">
-            <div class="form__item wow fadeInUp">
-              <input type="text" class="form__input" placeholder="Tên của bạn là gì ?" required>
-            </div>
-            <div class="form__item form__item--select wow fadeInUp">
-              <select class="form__input" name="advance" id="advance" required>
-                <option class="hidden">Bạn sẽ đến chứ</option>
-                <option value="Mình chắc chắn sẽ đến">Mình chắc chắn sẽ đến</option>
-                <option value="Tiếc quá mình không đến">Tiếc quá mình không đến
-                </option>
-              </select>
-            </div>
-            <div class="form__item form__item--select wow fadeInUp">
-              <select class="form__input" name="quantity" id="quantity" required>
-                <option class="hidden">Số lượng</option>
-                <option value="1 người">1 người</option>
-                <option value="2 người">2 người</option>
-                <option value="3 người">3 người</option>
-                <option value="Nhiều người">Nhiều người</option>
-              </select>
-            </div>
-            <div class="form__item form__item--textarea wow fadeInUp">
-              <textarea name="note" id="note" rows="6" placeholder="Để lại lời nhắn cho cô dâu và chú rể"
-                class="form__input" required></textarea>
-            </div>
-            <div class="form__item wow fadeInUp">
-              <button class="form__button py-2 px-6 w-full text-white text-xl bg-blue-500 rounded-lg" type="submit">Gửi
-                xác nhận</button>
-            </div>
-          </form>
         </div>
       </div>
     </div>
