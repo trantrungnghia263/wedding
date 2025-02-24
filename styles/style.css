@@ -13,7 +13,7 @@ body {
   background-position: 100%;
   background-repeat: no-repeat;
   background-origin: content-box;
-  background-size: 100%;
+  background-size: cover;
   height: 50vh;
   width: 100%;
 }
