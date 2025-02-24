@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
   //coundown
   function countDownDate () {
     const targetDate = new Date('2025-03-09');
-    console.log(targetDate);
+    // console.log(targetDate);
 
     const countDown = setInterval(function () {
       const currentDate = new Date();
-      console.log(currentDate);
+      // console.log(currentDate);
       const temp = targetDate - currentDate;
-      console.log(temp);
+      // console.log(temp);
 
       if (temp <= 0) {
         clearInterval(countDown);
@@ -35,31 +35,21 @@ document.addEventListener('DOMContentLoaded', () => {
   countDownDate();
 
   //parallax
-  const parallaxBgEls = document.querySelectorAll(".section__bg-parallax");
-  parallaxBgEls.forEach(parallaxBg => {
-    let latestScrollY = 0;
-    let ticking = false;
+  const parallaxEls = document.querySelectorAll(".section__bg-parallax");
 
-    function onScroll() {
-      latestScrollY = window.pageYOffset;
-      requestTick();
-    }
-
-    function requestTick() {
-      if (!ticking) {
-        requestAnimationFrame(updateParallax);
-        ticking = true;
-      }
-    }
-
-    function updateParallax() {
-      parallaxBg.style.transform = `translateY(${latestScrollY * 0.5}px)`;
-      ticking = false;
-    }
-
-    window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("scroll", function () {
+    let offset = window.pageYOffset;
+  
+    parallaxEls.forEach(parallax => {
+      let speed = 0.7;
+      let rect = parallax.getBoundingClientRect(); // Lấy vị trí của phần tử
+      let elementOffset = rect.top + window.scrollY; // Vị trí thực tế trên trang
+      let distance = offset - elementOffset; // Tính khoảng cách so với vị trí ban đầu
+  
+      parallax.style.backgroundPositionY = distance * speed + "px";
+    });
   });
-
+  
   //audio
   document.addEventListener('click', musicPlay);
   function musicPlay() {
