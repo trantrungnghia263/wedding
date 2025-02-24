@@ -33,3 +33,38 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   countDownDate();
 })
+
+new WOW().init();
+
+Swal.fire({
+  title: "Thiệp cưới online Ái Thi & Anh Tuấn",
+  showClass: {
+    popup: `
+      animate__animated
+      animate__fadeInUp
+      animate__faster
+    `
+  },
+  hideClass: {
+    popup: `
+    animate__animated
+    animate__fadeOutDown
+    animate__faster
+    `
+  }
+});
+
+document.addEventListener('click', musicPlay);
+function musicPlay() {
+  document.getElementById('audio').play();
+  document.removeEventListener('click', musicPlay);
+}
+
+// // parallax mobile
+if (/Mobi|Android/i.test(navigator.userAgent)) {
+  window.addEventListener('scroll', function() {
+    const parallax = document.querySelector('.parallax');
+    let offset = window.pageYOffset;
+    parallax.style.backgroundPositionY = -(offset * 0.5) + "px";
+  });
+}
