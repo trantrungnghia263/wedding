@@ -19,11 +19,11 @@ body {
 }
 
 .section__bg-parallax {
-  /* background-attachment: fixed; */
   background-size: cover;
-  /* background-position: 100%; */
   background-repeat: no-repeat;
+  position: absolute;
   height: 100%;
+  width: 100%;
 }
 
 .section__bg-parallax--1 {
